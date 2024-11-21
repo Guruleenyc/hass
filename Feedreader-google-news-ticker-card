@@ -1,0 +1,93 @@
+type: custom:html-card
+view_layout:
+  position: main
+content: |
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="ticker__item" style="color: #0984ff; animation: flashBlue 1s infinite;">IN THE NEWS TODAY <span style="color: green; font-weight: bold;"></span>
+      <style>
+      @keyframes flashRed {
+        0% { color: red; font-weight: bold; }
+        50% { color: #000000; font-weight: bold; }
+        100% { color: red; font-weight: bold; }
+      }
+      </style>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_0 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_1 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_2 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_3 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_4 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_5 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_6 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_7 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_8 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_9 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_10 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_11 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_12 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_13 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_14 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_15 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_16 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_17 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_18 ]]  |  </span>
+      <span class="ticker__item"  color: #FFFFFF;">[[ sensor.google_news_attributes_19 ]]  |  </span>
+    </div>
+  <style>
+    ha-card {
+      height: 0px;
+      visibility: hidden;
+      z-index: 99;
+    }    
+    
+    @keyframes ticker {
+      0% {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+        }
+      }  
+      .ticker-wrap {
+        font-family: tahoma;
+        font-size: 1.3rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 2.5rem;
+        background-color: black;
+        visibility: visible;
+        padding-left: 100%;
+        box-sizing: content-box;
+      }
+      .ticker {
+        display: inline-block;
+        height: 2.5rem;
+        font-size: 1.3rem;
+        line-height: 2.5rem;  
+        white-space: nowrap;
+        padding-right: 100%;
+        box-sizing: content-box;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: ticker;
+        animation-duration: 240s;
+        &__item {
+          display: inline-block;
+          color: white;
+          font-weight: bold;
+        }
+      }
+      .ticker__item:before {
+        content: "  »»";
+        color: #ffff00;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 10px;
+        }
+      .ticker__item:after {
+      }
+  </style>
