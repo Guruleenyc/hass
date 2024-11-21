@@ -1,0 +1,153 @@
+# RSS feed Ticker 
+sensor:
+  - platform: feedparser
+    name: Google News
+    date_format: "%a, %d %b %Y %H:%M:%S %Z"
+    feed_url: "https://www.google.com/alerts/feeds/10300145326056315160/3869743766635813837"
+    inclusions: title
+    exclusions: []
+    scan_interval:
+      minutes: 15
+    show_topn: 20
+
+  ## GOOGLE NEWS
+
+  - platform: template
+    sensors:
+      google_news_attributes_0:
+        friendly_name: "Google News Content 0"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[0].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_1:
+        friendly_name: "Google News Content 1"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[1].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_2:
+        friendly_name: "Google News Content 2"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[2].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_3:
+        friendly_name: "Google News Content 3"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[3].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_4:
+        friendly_name: "Google News Content 4"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[4].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_5:
+        friendly_name: "Google News Content 5"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[5].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_6:
+        friendly_name: "Google News Content 6"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[6].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_7:
+        friendly_name: "Google News Content 7"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[7].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_8:
+        friendly_name: "Google News Content 8"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[8].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_9:
+        friendly_name: "Google News Content 9"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[9].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_10:
+        friendly_name: "Google News Content 10"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[10].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_11:
+        friendly_name: "Google News Content 11"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[11].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_12:
+        friendly_name: "Google News Content 12"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[12].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_13:
+        friendly_name: "Google News Content 13"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[13].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_14:
+        friendly_name: "Google News Content 14"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[14].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_15:
+        friendly_name: "Google News Content 15"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[15].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_16:
+        friendly_name: "Google News Content 16"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[16].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_17:
+        friendly_name: "Google News Content 17"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[17].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_18:
+        friendly_name: "Google News Content 18"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[18].title }}
+
+  - platform: template
+    sensors:
+      google_news_attributes_19:
+        friendly_name: "Google News Content 19"
+        value_template: >
+          {{ states.sensor.google_news.attributes.entries[19].title }}
